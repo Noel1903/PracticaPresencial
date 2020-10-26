@@ -11,7 +11,7 @@ def suma():
     global datos
 
     if request.method=='GET':
-        
+
         valor1 = request.form.get('usuario_admin')
         valor2 = request.form.get('contra_admin')
 
@@ -26,7 +26,6 @@ def suma():
         restar=restavalor(valor1,valor2)
         restar=datos(request.json['numero1'],request.json['numero2'],request['operacion'])
         datos.append(restar)
-
 
         multi=multiplicarvalor(valor1,valor2)
         multi=datos(request.json['numero1'],request.json['numero2'],request['operacion'])
