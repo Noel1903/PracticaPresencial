@@ -9,49 +9,19 @@ CORS(app)
 @app.route("/Index")
 def realizaroperacion():
 
-    if request.method == 'POST':
+    if request.method == 'GET':
 
         result= {}
         val1=request.form.get('A')
         val2=request.form.get('B')
-
+    
         sumar=suma(val1,val2)
-
-        if sumar is not False:
-            result["sumar"] = 1
-            return result
-        result["res"] = 0
-        return result
-
 
         restar=resta(val1,val2)
 
-        if restar is not False:
-        	result["restar"]=2
-        	return result	
-        result["restar"]=0
-        return result
-
-
         multi=multiplicar(val1,val2)
 
-        if multi is not False:
-        	result["multi"]=3
-        	return result	
-        result["restar"]=0
-        return result
-
-        divid=division(val)
-
-        if divid is not False:
-            result["division"]=4
-            return result
-        result["division"]=0
-        return result
-
-
-
-
+        divid=division(val1,val2)
 
 
 @app.route("/")
