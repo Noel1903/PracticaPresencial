@@ -33,7 +33,7 @@ def suma():
 @app.route("/Index",methods=['GET'])
 def obtenerdatos():
     global op
-    datos=[]
+    dato=[]
     respuesta={}
     for operaciones1 in op:
         datos={
@@ -41,8 +41,8 @@ def obtenerdatos():
             'numero2':datos.valor2,
             'operacion':datos.operacion
         }
-        datos.append(dato)
-    respuesta.jsonify(datos)
+        datos.append(datos)
+    respuesta.jsonify(dato)
     return(respuesta)
 
 @app.route("/")
