@@ -147,8 +147,20 @@
                 alert('se produjo un error')
             })
             .then(res=>{
+                for(var i in res){
+                    mostrar.innerHTML+=`
+                    fecha: ${res[i].fecha}\n
+                    a: ${res[i].numero1}\n
+                    b:${res[i].numero2}\n
+                    tipoOperacion: ${res[i].operacion}\n
+                    resultado:${res[i].resultado}\n`
+                }
+                
 
             })
+
+    
+            
         }
 
     </script>
