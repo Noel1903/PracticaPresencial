@@ -4,18 +4,18 @@ class operaciones:
 		self.valor1=valor1
 		self.valor2=valor2
 
-	def suma(valor1,valor2):
+	def sumavalor(valor1,valor2):
 		return self.valor1+self.valor2
 
-	def resta(valor1,valor2):
+	def restavalor(valor1,valor2):
 		return self.valor1-self.valor2
 
 
-	def multiplicar(valor1,valor2):
+	def multiplicarvalor(valor1,valor2):
 		return self.valor1*self.valor2
 
 
-	def division(valor1,valor2):
+	def divisionvalor(valor1,valor2):
 		return self.valor1/self.valor2
 
 

@@ -6,22 +6,31 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route("/Index",methods=['POST'])
-def realizaroperacion():
+@app.route("/Index",methods=['POST','GET'])
+def suma():
+    global datos
 
-    if request.method == 'GET':
+    if request.method=='GET':
 
-        result= {}
-        val1=request.form.get('A')
-        val2=request.form.get('B')
+        valor1 = request.form.get('usuario_admin')
+        valor2 = request.form.get('contra_admin')
 
-        sumar=suma(val1,val2)
+        sumar=sumarvalor(valor1,valor2)
+        sumar=datos(request.json['numero1'],request.json['numero2'],request['operacion'])
+        datos.append(sumar)
 
-        restar=resta(val1,val2)
+        restar=restavalor(valor1,valor2)
+        restar=datos(request.json['numero1'],request.json['numero2'],request['operacion'])
+        datos.append(restar)
 
-        multi=multiplicar(val1,val2)
+        restar=restavalor(valor1,valor2)
+        restar=datos(request.json['numero1'],request.json['numero2'],request['operacion'])
+        datos.append(restar)
 
-        divid=division(val1,val2)
+
+        multi=multiplicarvalor(valor1,valor2)
+        multi=datos(request.json['numero1'],request.json['numero2'],request['operacion'])
+        datos.append(multi)
 
 
 @app.route("/")
