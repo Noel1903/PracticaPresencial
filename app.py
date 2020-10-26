@@ -12,8 +12,8 @@ def suma():
 
     if request.method=='GET':
 
-        valor1 = request.form.get('usuario_admin')
-        valor2 = request.form.get('contra_admin')
+        valor1 = request.form.get('A')
+        valor2 = request.form.get('B')
 
         sumar=sumarvalor(valor1,valor2)
         sumar=datos(request.json['numero1'],request.json['numero2'],request['operacion'])
@@ -30,7 +30,7 @@ def suma():
         multi=multiplicarvalor(valor1,valor2)
         multi=datos(request.json['numero1'],request.json['numero2'],request['operacion'])
         datos.append(multi)
-        
+
 
 @app.route("/")
 def index():
