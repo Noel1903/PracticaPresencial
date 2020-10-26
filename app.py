@@ -11,7 +11,7 @@ def suma():
     global datos
 
     if request.method=='GET':
-
+        
         valor1 = request.form.get('usuario_admin')
         valor2 = request.form.get('contra_admin')
 
