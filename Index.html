@@ -26,13 +26,14 @@
         <p>Resultado</p>
         <input type="text" id="resultado">
         <p>historial</p>
+        <button type="button" onclick="historial()">Enviar historial</button>
         <textarea rows="20" cols="100" id="historial"></textarea>
     </div>
 
     <script>
         function suma(){
-            var a=document.querySelector('#A')
-            var b=document.querySelector('#B')
+            var a=document.querySelector('#A').value
+            var b=document.querySelector('#B').value
             var op="suma"
             var datos={
                 'numero1':a,
@@ -50,8 +51,8 @@
         }
 
         function resta(){
-            var a=document.querySelector('#A')
-            var b=document.querySelector('#B')
+            var a=document.querySelector('#A').value
+            var b=document.querySelector('#B').value
             var op="resta"
             var datos={
                 'numero1':a,
@@ -68,8 +69,8 @@
 
         }
         function multiplicacion(){
-            var a=document.querySelector('#A')
-            var b=document.querySelector('#B')
+            var a=document.querySelector('#A').value
+            var b=document.querySelector('#B').value
             var op="multiplicacion"
             var datos={
                 'numero1':a,
@@ -86,8 +87,8 @@
 
         }
         function division(){
-            var a=document.querySelector('#A')
-            var b=document.querySelector('#B')
+            var a=document.querySelector('#A').value
+            var b=document.querySelector('#B').value
             var op="division"
             var datos={
                 'numero1':a,
@@ -105,8 +106,8 @@
         }
 
         function potencia(){
-            var a=document.querySelector('#A')
-            var b=document.querySelector('#B')
+            var a=document.querySelector('#A').value
+            var b=document.querySelector('#B').value
             var op="potencia"
             var datos={
                 'numero1':a,
@@ -122,8 +123,8 @@
                 })
         }
         function raiz(){
-            var a=document.querySelector('#A')
-            var b=document.querySelector('#B')
+            var a=document.querySelector('#A').value
+            var b=document.querySelector('#B').value
             var op="raiz"
             var datos={
                 'numero1':a,
@@ -137,6 +138,17 @@
                     'Content-type':'application/json'
                     }
                 })
+        }
+        function historial(){
+            var mostrar=document.querySelector('#historial')
+            fetch('')
+            .then(respuesta=>respuesta.json())
+            .catch(err=>{
+                alert('se produjo un error')
+            })
+            .then(res=>{
+
+            })
         }
 
     </script>
