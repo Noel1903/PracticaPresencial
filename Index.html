@@ -19,6 +19,8 @@
         <button type="button" onclick="resta()">Resta</button>
         <button type="button"onclick="multiplicacion()">Multiplicación</button>
         <button type="button"onclick="division()">División</button>
+        <button type="button"onclick="potencia()">Potencia</button>
+        <button type="button"onclick="raiz()">Raiz</button>
     </div>
     <div>
         <p>Resultado</p>
@@ -32,17 +34,109 @@
             var a=document.querySelector('#A')
             var b=document.querySelector('#B')
             var op="suma"
-            
+            var datos={
+                'numero1':a,
+                'numero2':b,
+                'operacion':op
+            }
+            fetch(' ',{
+                    method:'POST',
+                    body:JSON.stringify(datos),
+                    headers:{
+                    'Content-type':'application/json'
+                    }
+                })
+
         }
 
         function resta(){
+            var a=document.querySelector('#A')
+            var b=document.querySelector('#B')
+            var op="resta"
+            var datos={
+                'numero1':a,
+                'numero2':b,
+                'operacion':op
+            }
+            fetch(' ',{
+                    method:'POST',
+                    body:JSON.stringify(datos),
+                    headers:{
+                    'Content-type':'application/json'
+                    }
+                })
 
         }
         function multiplicacion(){
+            var a=document.querySelector('#A')
+            var b=document.querySelector('#B')
+            var op="multiplicacion"
+            var datos={
+                'numero1':a,
+                'numero2':b,
+                'operacion':op
+            }
+            fetch(' ',{
+                    method:'POST',
+                    body:JSON.stringify(datos),
+                    headers:{
+                    'Content-type':'application/json'
+                    }
+                })
 
         }
         function division(){
+            var a=document.querySelector('#A')
+            var b=document.querySelector('#B')
+            var op="division"
+            var datos={
+                'numero1':a,
+                'numero2':b,
+                'operacion':op
+            }
+            fetch(' ',{
+                    method:'POST',
+                    body:JSON.stringify(datos),
+                    headers:{
+                    'Content-type':'application/json'
+                    }
+                })
 
+        }
+
+        function potencia(){
+            var a=document.querySelector('#A')
+            var b=document.querySelector('#B')
+            var op="potencia"
+            var datos={
+                'numero1':a,
+                'numero2':b,
+                'operacion':op
+            }
+            fetch(' ',{
+                    method:'POST',
+                    body:JSON.stringify(datos),
+                    headers:{
+                    'Content-type':'application/json'
+                    }
+                })
+        }
+        function raiz(){
+            var a=document.querySelector('#A')
+            var b=document.querySelector('#B')
+            var op="raiz"
+            var datos={
+                'numero1':a,
+                'numero2':b,
+                'operacion':op
+            }
+            fetch(' ',{
+                    method:'POST',
+                    body:JSON.stringify(datos),
+                    headers:{
+                    'Content-type':'application/json'
+                    }
+                })
         }
 
     </script>
