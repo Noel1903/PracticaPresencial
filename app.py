@@ -43,6 +43,12 @@ def realizaroperacion():
 
         divid=division(val)
 
+        if divid is not False:
+            result["division"]=4
+            return result
+        result["division"]=0
+        return result
+
 
 
 
