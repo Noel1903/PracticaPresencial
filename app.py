@@ -30,7 +30,7 @@ def suma():
         multi=multiplicarvalor(valor1,valor2)
         multi=datos(request.json['numero1'],request.json['numero2'],request['operacion'])
         datos.append(multi)
-
+        
 
 @app.route("/")
 def index():
