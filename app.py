@@ -11,7 +11,7 @@ def suma():
     global datos
 
     if request.method=='POST':
-
+        return "Backend"
         valor1 = request.form.get('A')
         valor2 = request.form.get('B')
         sumar=sumarvalor(valor1,valor2)
@@ -37,9 +37,9 @@ def obtenerdatos():
     respuesta={}
     for operaciones1 in op:
         datos={
-            'numero1':datos.valor1,
-            'numero2':datos.valor2,
-            'operacion':datos.operacion
+            'a':operaciones.valor1,
+            'b':datos.valor2,
+            'resultado':datos.operacion
         }
         datos.append(datos)
     respuesta.jsonify(dato)
